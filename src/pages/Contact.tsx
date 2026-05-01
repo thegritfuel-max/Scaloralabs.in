@@ -1,7 +1,7 @@
 import { Button } from '@/src/components/ui/Button';
 import { PageTransition } from '@/src/components/layout/PageTransition';
 import { motion } from 'motion/react';
-import { Phone, Mail, MessageSquare, Linkedin, Loader2, CheckCircle2 } from 'lucide-react';
+import { Phone, Mail, MessageSquare, Linkedin, Instagram, Loader2, CheckCircle2 } from 'lucide-react';
 import React, { useState } from 'react';
 
 export const Contact: React.FC = () => {
@@ -105,12 +105,28 @@ export const Contact: React.FC = () => {
                     <div className="text-lg font-bold">scaloralabs.in@gmail.com</div>
                   </div>
                 </div>
-              </div>
-              
-              <div className="mt-12 flex gap-4">
-                <a href="#" className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-sm font-bold hover:bg-white/10 transition-all">
-                  <Linkedin size={18} /> LinkedIn
-                </a>
+
+                <div className="pt-6 border-t border-white/5">
+                  <div className="text-xs font-bold uppercase tracking-widest text-muted-text mb-6">Social Presence</div>
+                  <div className="flex gap-4">
+                    <a 
+                      href="https://www.linkedin.com/company/scalora-labs/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-sm font-bold hover:bg-growth-green/10 hover:border-growth-green/50 hover:text-growth-green transition-all"
+                    >
+                      <Linkedin size={18} /> LinkedIn
+                    </a>
+                    <a 
+                      href="https://www.instagram.com/scaloralabs/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-sm font-bold hover:bg-electric-blue/10 hover:border-electric-blue/50 hover:text-electric-blue transition-all"
+                    >
+                      <Instagram size={18} /> Instagram
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
 

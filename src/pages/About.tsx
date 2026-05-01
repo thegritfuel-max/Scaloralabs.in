@@ -1,20 +1,25 @@
 import { PageTransition } from '@/src/components/layout/PageTransition';
 import { motion } from 'motion/react';
-import { Linkedin, Target, Shield, Zap, TrendingUp } from 'lucide-react';
+import { Linkedin, Instagram, Mail, Code, BarChart3, GraduationCap, Target, Shield, Zap, TrendingUp } from 'lucide-react';
 import React from 'react';
 
 const founders = [
   {
-    name: 'Devansh Kadam',
+    name: 'Devansh G Kadam',
     role: 'Co-Founder | Growth Strategist',
-    img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80',
-    link: '#'
+    email: 'devanshkadam2@gmail.com',
+    linkedin: 'https://www.linkedin.com/in/devansh-kadam?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    instagram: 'https://www.instagram.com/thedevanshkadam?igsh=eWFhY2VvYXVnMm5s',
+    bio: 'Engineer in Computer Science and Business Systems. Specialized in building performance-driven growth engines and technical marketing architectures.',
+    img: 'https://i.postimg.cc/kXND7zyM/devansh-kadam.jpg'
   },
   {
-    name: 'Soham Powar',
+    name: 'Soham C Pawar',
     role: 'Co-Founder | Tech & Systems',
-    img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80',
-    link: '#'
+    email: 'sohamcr7744@gmail.com',
+    linkedin: 'https://www.linkedin.com/in/soham-c-pawar/',
+    bio: 'Engineer in Computer Science and Business Systems. Architecting high-load digital systems and scalable business infrastructures.',
+    img: 'https://i.postimg.cc/bJ2NWBJj/soham-profile-page.jpg'
   }
 ];
 
@@ -30,6 +35,7 @@ export const About: React.FC = () => {
     <PageTransition>
       <div className="pt-32 pb-20 px-6 min-h-screen">
         <div className="max-w-7xl mx-auto">
+          {/* Hero Section */}
           <div className="text-center mb-24">
             <h1 className="font-heading font-extrabold text-5xl md:text-7xl mb-8 uppercase tracking-tighter">
               BUILT TO SCALE <br/><span className="gradient-text">INDIAN BRANDS</span>
@@ -39,7 +45,8 @@ export const About: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mb-32">
+          {/* Mission Section */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mb-40">
             <div className="relative">
                <div className="absolute inset-0 bg-electric-blue/20 blur-[100px] rounded-full" />
                <img 
@@ -71,25 +78,93 @@ export const About: React.FC = () => {
             </div>
           </div>
 
-          <div className="mb-32">
-            <h2 className="font-heading font-extrabold text-4xl text-center mb-16 uppercase">MEET THE <span className="gradient-text">FOUNDERS</span></h2>
-            <div className="flex flex-wrap justify-center gap-12">
-              {founders.map(f => (
-                <div key={f.name} className="glass-card p-10 text-center group cursor-pointer w-full md:w-80">
-                  <div className="relative w-40 h-40 mx-auto mb-8 rounded-full overflow-hidden border-4 border-white/5 group-hover:border-growth-green transition-colors">
-                    <img src={f.img} alt={f.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+          {/* Founders Section */}
+          <div className="mb-40">
+            <div className="text-center mb-20">
+              <h2 className="font-heading font-extrabold text-4xl md:text-5xl uppercase tracking-tight">
+                MEET THE <span className="gradient-text">FOUNDERS</span>
+              </h2>
+              <p className="text-muted-text mt-4">Engineers at heart, strategists by trade.</p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              {founders.map((founder, index) => (
+                <motion.div 
+                  key={founder.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.2 }}
+                  className="glass-card overflow-hidden group"
+                >
+                  <div className="aspect-[4/5] relative overflow-hidden">
+                    <img 
+                      src={founder.img} 
+                      alt={founder.name}
+                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary-black via-transparent to-transparent opacity-60" />
+                    
+                    <div className="absolute bottom-8 left-8 right-8 text-left">
+                      <h3 className="font-heading font-extrabold text-3xl mb-1 uppercase tracking-tight">{founder.name}</h3>
+                      <p className="text-growth-green font-bold uppercase tracking-widest text-xs mb-4">{founder.role}</p>
+                    </div>
                   </div>
-                  <h4 className="font-heading font-bold text-2xl mb-2">{f.name}</h4>
-                  <p className="text-muted-text text-sm mb-6">{f.role}</p>
-                  <a href={f.link} className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 transition-colors">
-                    <Linkedin size={20} />
-                  </a>
-                </div>
+
+                  <div className="p-8 text-left">
+                    <div className="flex gap-4 mb-8">
+                      <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-xs font-bold uppercase tracking-wider">
+                        <GraduationCap size={14} className="text-growth-green" /> CSBS Engineer
+                      </div>
+                    </div>
+
+                    <p className="text-muted-text mb-8 leading-relaxed">
+                      {founder.bio}
+                    </p>
+
+                    <div className="flex flex-wrap gap-4">
+                      <a 
+                        href={founder.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-6 py-3 rounded-full bg-growth-green/10 border border-growth-green/20 text-growth-green font-bold text-sm hover:bg-growth-green hover:text-black transition-all"
+                      >
+                        <Linkedin size={18} /> LinkedIn
+                      </a>
+                      {founder.instagram && (
+                        <a 
+                          href={founder.instagram}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-white font-bold text-sm hover:bg-white/10 transition-all"
+                        >
+                          <Instagram size={18} /> Instagram
+                        </a>
+                      )}
+                      <a 
+                        href={`mailto:${founder.email}`}
+                        className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-white font-bold text-sm hover:bg-white/10 transition-all"
+                      >
+                        <Mail size={18} /> Email
+                      </a>
+                    </div>
+                  </div>
+                </motion.div>
               ))}
             </div>
+          </div>
+
+          {/* CSBS Section */}
+          <div className="p-12 glass-card text-center relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-growth-green to-electric-blue" />
+            <h2 className="font-heading font-bold text-3xl mb-6">THE CSBS EDGE</h2>
+            <p className="text-muted-text text-lg max-w-3xl mx-auto leading-relaxed">
+              As Computer Science and Business Systems engineers, we don't just build code; we architect economic engines. Our approach combines rigorous algorithmic efficiency with business-centric growth models to ensure every technical decision drives a commercial outcome.
+            </p>
           </div>
         </div>
       </div>
     </PageTransition>
   );
 };
+
