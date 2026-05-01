@@ -77,9 +77,11 @@ export const AnimatedCarousel = ({
     <div className={`w-full ${padding} bg-primary-black ${containerClassName}`}>
       <div className="max-w-7xl mx-auto px-6">
         <div className={`flex flex-col ${spacing} items-center`}>
-          <h2 className={`font-heading font-bold text-center tracking-widest text-xs uppercase text-muted-text mb-8 ${titleClassName}`}>
-            <TextRoll duration={1}>{title}</TextRoll>
-          </h2>
+          {title && (
+            <h2 className={`font-heading font-bold text-center tracking-widest text-xs uppercase text-muted-text mb-8 ${titleClassName}`}>
+              <TextRoll duration={1}>{title}</TextRoll>
+            </h2>
+          )}
           
           <div className="w-full">
             <Carousel setApi={setApi} opts={{ loop: true, align: 'start' }} className={`w-full ${carouselClassName}`}>

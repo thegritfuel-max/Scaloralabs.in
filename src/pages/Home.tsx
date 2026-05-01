@@ -5,10 +5,10 @@ import { ArrowRight, BarChart3, Globe, Megaphone, Search, Settings, Zap, Plus, M
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { AnimatedCarousel } from '@/src/components/ui/logo-carousel';
 import { InfiniteTextMarquee } from '@/src/components/ui/infinite-text-marquee';
 import { Calendar } from '@/src/components/ui/calendar';
 import Testimonials from '@/src/components/ui/testimonials';
+import NeuralVortexBackground from '@/src/components/ui/neural-vortex-background';
 import {
   Accordion,
   AccordionContent,
@@ -81,6 +81,7 @@ export const Home: React.FC = () => {
         {/* HERO SECTION */}
         <section className="relative min-h-screen flex items-center pt-20 pb-20 px-6 md:px-12 hero-section overflow-hidden bg-[#050505]">
           {/* Background Elements */}
+          <NeuralVortexBackground className="absolute !fixed" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-radial-glow z-0 opacity-50" />
           <div className="absolute top-[-100px] right-[-100px] w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(34,197,94,0.05)_0%,transparent_70%)] blur-[100px] z-0" />
           
@@ -122,11 +123,6 @@ export const Home: React.FC = () => {
             </div>
           </div>
         </section>
-
-        {/* TRUST SECTION */}
-        <AnimatedCarousel 
-          title="Trusted by Modern Startups, Restaurants, and Indian Retail Brands"
-        />
 
         {/* MARQUEE */}
         <InfiniteTextMarquee 
