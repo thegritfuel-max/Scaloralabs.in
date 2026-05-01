@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800&family=Inter:wght@400;500;600&family=Sora:wght@600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-stats: "Sora", sans-serif;
+  
+  --color-primary-black: #111111;
+  --color-dark-surface: #1A1A1A;
+  --color-growth-green: #22C55E;
+  --color-electric-blue: #3B82F6;
+  --color-muted-text: #A1A1AA;
+}
+
+@layer base {
+  body {
+    @apply bg-[#111111] text-white font-sans antialiased selection:bg-growth-green selection:text-black;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/[0.03] backdrop-blur-[12px] border border-white/[0.08] rounded-[24px] shadow-2xl;
+  }
+  
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-linear-to-br from-white via-[#BDBDBD] to-[#5E5E5E];
+  }
+  
+  .growth-gradient {
+    @apply bg-linear-to-br from-[#22C55E] to-[#3B82F6];
+  }
+  
+  .metallic-gradient {
+    @apply bg-linear-to-br from-white via-[#BDBDBD] to-[#5E5E5E];
+  }
+
+  .space-grid {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .bg-radial-glow {
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+    filter: blur(80px);
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #111111;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
