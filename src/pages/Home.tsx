@@ -5,6 +5,7 @@ import { ArrowRight, BarChart3, Globe, Megaphone, Search, Settings, Zap, Plus, M
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Link } from 'react-router-dom';
 import { InfiniteTextMarquee } from '@/src/components/ui/infinite-text-marquee';
 import { Calendar } from '@/src/components/ui/calendar';
 import Testimonials from '@/src/components/ui/testimonials';
@@ -104,8 +105,12 @@ export const Home: React.FC = () => {
               </p>
               
               <div className="hero-heading flex flex-wrap justify-center gap-6 mb-20">
-                <Button variant="primary" size="lg" className="px-12 h-16 text-lg">Start Growing</Button>
-                <Button variant="outline" size="lg" className="px-12 h-16 text-lg">View Pricing</Button>
+                <a href="https://calendar.app.google/XzTZdumveiY2RaBw9" target="_blank" rel="noopener noreferrer">
+                  <Button variant="primary" size="lg" className="px-12 h-16 text-lg">Start Growing</Button>
+                </a>
+                <Link to="/pricing">
+                  <Button variant="outline" size="lg" className="px-12 h-16 text-lg">View Pricing</Button>
+                </Link>
               </div>
               
               <div className="hero-heading grid grid-cols-3 gap-12 pt-12 border-t border-white/5 w-full">
@@ -253,18 +258,22 @@ export const Home: React.FC = () => {
         {/* CTA SECTION */}
         <section className="py-32 px-6">
           <div className="max-w-5xl mx-auto text-center rounded-[40px] bg-linear-to-br from-white/10 to-white/5 border border-white/10 p-20 relative overflow-hidden">
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80')] opacity-10 bg-cover bg-center grayscale" />
+            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80')] opacity-20 bg-cover bg-center" />
             
-            <div className="relative z-10">
-              <h2 className="font-heading font-extrabold text-5xl md:text-7xl mb-10 uppercase">READY TO <span className="gradient-text">SCALE?</span></h2>
-              <p className="text-muted-text text-xl mb-12 max-w-xl mx-auto">
-                No fluff. No random agencies. Just pure performance-driven growth for your business.
-              </p>
-              <div className="flex flex-wrap justify-center gap-6">
-                <Button variant="primary" size="lg">Book Strategy Call</Button>
-                <Button variant="outline" size="lg">See Pricing</Button>
+              <div className="relative z-10">
+                <h2 className="font-heading font-extrabold text-5xl md:text-7xl mb-10 uppercase">READY TO <span className="gradient-text">SCALE?</span></h2>
+                <p className="text-muted-text text-xl mb-12 max-w-xl mx-auto">
+                  No fluff. No random agencies. Just pure performance-driven growth for your business.
+                </p>
+                <div className="flex flex-wrap justify-center gap-6">
+                  <a href="https://calendar.app.google/XzTZdumveiY2RaBw9" target="_blank" rel="noopener noreferrer">
+                    <Button variant="primary" size="lg">Book Strategy Call</Button>
+                  </a>
+                  <Link to="/pricing">
+                    <Button variant="outline" size="lg">See Pricing</Button>
+                  </Link>
+                </div>
               </div>
-            </div>
           </div>
         </section>
       </div>

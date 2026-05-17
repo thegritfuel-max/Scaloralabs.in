@@ -70,10 +70,14 @@ export const Footer: React.FC = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/5 text-center">
+      <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="text-muted-text text-xs">
           © {new Date().getFullYear()} Scalora Labs. All rights reserved.
         </p>
+        <div className="flex gap-6">
+          <Link to="/privacy" className="text-muted-text hover:text-white transition-colors text-[10px] uppercase font-bold tracking-widest">Privacy Policy</Link>
+          <Link to="/terms" className="text-muted-text hover:text-white transition-colors text-[10px] uppercase font-bold tracking-widest">Terms of Service</Link>
+        </div>
       </div>
     </footer>
   );

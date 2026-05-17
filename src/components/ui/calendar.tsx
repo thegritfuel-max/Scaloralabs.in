@@ -63,7 +63,7 @@ export function Calendar() {
   };
 
   return (
-    <BentoCard height="h-auto" linkTo={bookingLink}>
+    <BentoCard height="h-auto">
       <div className="grid h-full gap-8">
         <div className="relative z-10">
           <h2 className="mb-4 text-2xl md:text-3xl font-heading font-extrabold uppercase tracking-tight">
@@ -72,7 +72,9 @@ export function Calendar() {
           <p className="mb-6 text-sm text-muted-text leading-relaxed">
             Feel free to reach out to our team of strategists for a free audit!
           </p>
-          <Button className="rounded-full bg-white text-black font-bold uppercase transition-transform hover:scale-105">Book Now</Button>
+          <a href="https://calendar.app.google/XzTZdumveiY2RaBw9" target="_blank" rel="noopener noreferrer">
+            <Button className="rounded-full bg-white text-black font-bold uppercase transition-transform hover:scale-105">Book Now</Button>
+          </a>
         </div>
         <div className="transition-all duration-500 ease-out relative">
           <div>

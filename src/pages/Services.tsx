@@ -30,11 +30,12 @@ const detailedServices = [
   { 
     id: 'ads', 
     icon: Target, 
-    title: 'Meta Ads', 
+    title: 'Ads Strategy', 
     desc: 'Direct response Facebook & Instagram campaigns built to sell out your stock.', 
     timeline: 'Launch in 7 days',
-    longDesc: 'Our Meta Ads strategy goes beyond just pressing "Boost Post". We implement complex funnel structures using Advantage+ shopping campaigns, custom audience lookalikes, and rigorous A/B testing on creatives. We focus on ROAS (Return on Ad Spend) that actually translates to profit.',
-    features: ['Dynamic Creative Optimization', 'Retargeting Funnels', 'Pixel & CAPI Setup', 'Creative Strategy']
+    longDesc: 'Our Meta Ads strategy goes beyond just pressing "Boost Post". We implement complex funnel structures using Advantage+ shopping campaigns, custom audience lookalikes, and rigorous A/B testing on creatives.',
+    features: ['Dynamic Creative Optimization', 'Retargeting Funnels', 'Pixel & CAPI Setup', 'Creative Strategy'],
+    reelId: 'DYNHGN4IhVs'
   },
   { 
     id: 'google', 
@@ -42,17 +43,18 @@ const detailedServices = [
     title: 'Google Ads', 
     desc: 'Capture intent-based traffic. Search, Display, and Performance Max mastery.', 
     timeline: 'Launch in 10 days',
-    longDesc: 'Be exactly where your customers are searching. We dominate Search, Shopping, and Youtube ads. Our Google Ads management includes keyword harvesting, negative keyword pruning, and landing page optimization to ensure the highest Quality Score possible.',
+    longDesc: 'Be exactly where your customers are searching. We dominate Search, Shopping, and Youtube ads.',
     features: ['Performance Max Campaigns', 'Keyword Research', 'Conversion Tracking', 'YouTube Ad Placement']
   },
   { 
     id: 'web', 
     icon: Layout, 
-    title: 'Website Design', 
+    title: 'Premium Websites', 
     desc: 'Premium luxury websites built on high-conversion architectures.', 
     timeline: '14-21 days',
-    longDesc: 'A website shouldn\'t just look good—it should be a 24/7 salesperson. We build lightning-fast, mobile-optimized sites using modern frameworks that prioritize user experience and conversion rate optimization (CRO).',
-    features: ['Speed Optimization', 'SEO-Ready Structure', 'Mobile-First Design', 'Custom E-commerce Flows']
+    longDesc: 'A website shouldn\'t just look good—it should be a 24/7 salesperson. We build lightning-fast, mobile-optimized sites.',
+    features: ['Speed Optimization', 'SEO-Ready Structure', 'Mobile-First Design', 'Custom E-commerce Flows'],
+    reelId: 'DYU7vXHoVsu'
   },
   { 
     id: 'funnels', 
@@ -131,6 +133,20 @@ const caseStudies = [
   }
 ];
 
+const InstagramReel: React.FC<{ reelId: string }> = ({ reelId }) => {
+  return (
+    <div className="w-full flex justify-center mt-6">
+      <blockquote 
+        className="instagram-media" 
+        data-instgrm-permalink={`https://www.instagram.com/reel/${reelId}/`}
+        data-instgrm-version="14"
+        style={{ background:'#000', border:'0', borderRadius:'12px', boxShadow:'0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)', margin: '1px', maxWidth:'326px', minWidth:'326px', padding:'0', width:'99.375%' }}
+      >
+      </blockquote>
+    </div>
+  );
+};
+
 export const Services: React.FC = () => {
   return (
     <PageTransition>
@@ -207,6 +223,8 @@ export const Services: React.FC = () => {
                       </div>
                     ))}
                   </div>
+
+                  {service.reelId && <InstagramReel reelId={service.reelId} />}
                   
                   <div className="mt-8 flex gap-4">
                     <Button variant="primary" className="flex-grow py-6 text-base" onClick={() => window.location.href = '/contact'}>
@@ -240,8 +258,8 @@ export const Services: React.FC = () => {
                   className="rounded-[40px] overflow-hidden bg-white/5 border border-white/5 hover:border-growth-green/20 transition-all group"
                 >
                   <div className="h-64 overflow-hidden relative">
-                    <img src={study.img} alt={study.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary-black to-transparent" />
+                    <img src={study.img} alt={study.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary-black via-transparent to-transparent opacity-80" />
                     <div className="absolute bottom-6 left-6 flex items-center gap-4">
                       <div className="w-16 h-16 rounded-2xl bg-white p-3 flex items-center justify-center shadow-2xl">
                         <img src={study.logo} alt={study.title} className="w-full h-full object-contain" />
@@ -300,12 +318,7 @@ export const Services: React.FC = () => {
                   </Button>
                </div>
                <div className="relative group lg:block hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" 
-                    alt="Analytics Dashboard"
-                    className="rounded-[32px] shadow-2xl skew-y-3 group-hover:skew-y-0 transition-all duration-1000 border border-white/10 grayscale-[0.8] group-hover:grayscale-0"
-                  />
-                  <div className="absolute inset-0 rounded-[32px] ring-1 ring-inset ring-white/10" />
+                  <InstagramReel reelId="DLNn6NcIb0Y" />
                </div>
             </div>
           </div>

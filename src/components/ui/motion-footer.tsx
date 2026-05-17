@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { cn } from "@/src/lib/utils";
 import { Link } from "react-router-dom";
+import { Twitter, Facebook, Instagram, Linkedin } from "lucide-react";
 
 // Register ScrollTrigger safely for React
 if (typeof window !== "undefined") {
@@ -303,23 +304,14 @@ export function CinematicFooter() {
           <div className="absolute top-20 left-0 w-full overflow-hidden border-y border-white/5 bg-primary-black/60 backdrop-blur-md py-4 z-10 -rotate-1 scale-105 shadow-2xl">
             <div className="flex w-max animate-footer-scroll-marquee text-[10px] md:text-xs font-bold tracking-[0.4em] text-muted-text uppercase">
               <MarqueeItem />
-              <MarqueeItem />
+              <div aria-hidden="true">
+                <MarqueeItem />
+              </div>
             </div>
           </div>
 
           {/* 2. Main Center Content */}
           <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-6 mt-32 w-full max-w-6xl mx-auto">
-            <div className="mb-8 text-center">
-               <p className="text-[10px] md:text-xs font-bold tracking-[0.5em] text-growth-green uppercase mb-4">Trusted by modern startups, restaurants, and Indian retail brands</p>
-               <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700">
-                  <img src="https://cdn.worldvectorlogo.com/logos/zomato-1.svg" alt="Zomato" className="h-4 md:h-6 w-auto invert" />
-                  <img src="https://cdn.worldvectorlogo.com/logos/swiggy-1.svg" alt="Swiggy" className="h-4 md:h-6 w-auto invert" />
-                  <img src="https://cdn.worldvectorlogo.com/logos/paytm-1.svg" alt="Paytm" className="h-4 md:h-6 w-auto invert" />
-                  <img src="https://cdn.worldvectorlogo.com/logos/ola-1.svg" alt="Ola" className="h-4 md:h-6 w-auto invert" />
-                  <img src="https://cdn.worldvectorlogo.com/logos/tata.svg" alt="Tata" className="h-4 md:h-6 w-auto invert" />
-               </div>
-            </div>
-
             <h2
               ref={headingRef}
               className="text-6xl md:text-9xl font-heading font-black footer-text-glow tracking-tighter mb-12 text-center uppercase"
@@ -347,6 +339,22 @@ export function CinematicFooter() {
                 <Link to="/portfolio" className="text-muted-text font-medium text-xs md:text-sm hover:text-white transition-colors">Portfolio</Link>
                 <Link to="/about" className="text-muted-text font-medium text-xs md:text-sm hover:text-white transition-colors">About</Link>
                 <Link to="/contact" className="text-muted-text font-medium text-xs md:text-sm hover:text-white transition-colors">Contact</Link>
+              </div>
+
+              {/* Social Icons */}
+              <div className="flex justify-center gap-6 mt-8">
+                <a href="https://x.com/scaloralabs" target="_blank" rel="noopener noreferrer" className="text-muted-text hover:text-white transition-all transform hover:-translate-y-1">
+                  <Twitter size={20} />
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61588904597179" target="_blank" rel="noopener noreferrer" className="text-muted-text hover:text-blue-500 transition-all transform hover:-translate-y-1">
+                  <Facebook size={20} />
+                </a>
+                <a href="https://www.instagram.com/scaloralabs/" target="_blank" rel="noopener noreferrer" className="text-muted-text hover:text-pink-500 transition-all transform hover:-translate-y-1">
+                  <Instagram size={20} />
+                </a>
+                <a href="https://www.linkedin.com/company/scalora-labs/" target="_blank" rel="noopener noreferrer" className="text-muted-text hover:text-blue-400 transition-all transform hover:-translate-y-1">
+                  <Linkedin size={20} />
+                </a>
               </div>
             </div>
           </div>

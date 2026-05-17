@@ -1,7 +1,7 @@
 import { Button } from '@/src/components/ui/Button';
 import { PageTransition } from '@/src/components/layout/PageTransition';
 import { motion } from 'motion/react';
-import { Phone, Mail, MessageSquare, Linkedin, Instagram, Loader2, CheckCircle2 } from 'lucide-react';
+import { Phone, Mail, MessageSquare, Linkedin, Instagram, Twitter, Facebook, Loader2, CheckCircle2 } from 'lucide-react';
 import React, { useState } from 'react';
 
 export const Contact: React.FC = () => {
@@ -108,7 +108,7 @@ export const Contact: React.FC = () => {
 
                 <div className="pt-6 border-t border-white/5">
                   <div className="text-xs font-bold uppercase tracking-widest text-muted-text mb-6">Social Presence</div>
-                  <div className="flex gap-4">
+                  <div className="flex flex-wrap gap-4">
                     <a 
                       href="https://www.linkedin.com/company/scalora-labs/" 
                       target="_blank" 
@@ -124,6 +124,22 @@ export const Contact: React.FC = () => {
                       className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-sm font-bold hover:bg-electric-blue/10 hover:border-electric-blue/50 hover:text-electric-blue transition-all"
                     >
                       <Instagram size={18} /> Instagram
+                    </a>
+                    <a 
+                      href="https://x.com/scaloralabs" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-sm font-bold hover:bg-white/10 hover:border-white/30 transition-all"
+                    >
+                      <Twitter size={18} /> X
+                    </a>
+                    <a 
+                      href="https://www.facebook.com/profile.php?id=61588904597179" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-sm font-bold hover:bg-blue-600/10 hover:border-blue-600/50 hover:text-blue-500 transition-all"
+                    >
+                      <Facebook size={18} /> Facebook
                     </a>
                   </div>
                 </div>

@@ -8,7 +8,7 @@ export default function Testimonials() {
             <div className="max-w-7xl mx-auto space-y-8 md:space-y-16">
                 <div className="relative z-10 mx-auto max-w-2xl space-y-6 text-center md:space-y-12">
                     <h2 className="font-heading font-extrabold text-4xl md:text-6xl tracking-tight leading-[0.9]">
-                        BUILT BY MARKERS, <span className="gradient-text">TRUSTED BY LEADERS</span>
+                        BUILT BY MARKETERS, <span className="gradient-text">TRUSTED BY LEADERS</span>
                     </h2>
                     <p className="text-muted-text text-lg">Scalora Labs is evolving how Indian businesses leverage digital systems to dominate their markets globally.</p>
                 </div>
@@ -21,22 +21,22 @@ export default function Testimonials() {
                         <CardContent className="p-0">
                             <blockquote className="grid h-full grid-rows-[1fr_auto] gap-8">
                                 <p className="text-2xl font-heading font-bold text-white/90 leading-tight italic">
-                                    "Tailus has transformed the way I develop web applications. Their extensive collection of UI components, blocks, and templates has significantly accelerated my workflow. The flexibility to customize every aspect allows me to create unique user experiences."
+                                    "Scalora Labs completely transformed our Meta ad performance. We hit an average 4.2x ROAS within the first 60 days of scaling our D2C apparel brand."
                                 </p>
 
                                 <div className="grid grid-cols-[auto_1fr] items-center gap-3">
                                     <Avatar className="size-14 border-2 border-growth-green">
                                         <AvatarImage
-                                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
-                                            alt="Shekinah Tshiokufila"
+                                            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                                            alt="Arnav Sharma"
                                             loading="lazy"
                                         />
-                                        <AvatarFallback>ST</AvatarFallback>
+                                        <AvatarFallback>AS</AvatarFallback>
                                     </Avatar>
 
                                     <div>
-                                        <cite className="text-base font-bold text-white">Shekinah Tshiokufila</cite>
-                                        <span className="text-muted-text block text-sm uppercase tracking-widest font-bold">Software Engineer</span>
+                                        <cite className="text-base font-bold text-white">Arnav Sharma</cite>
+                                        <span className="text-muted-text block text-sm uppercase tracking-widest font-bold">Founder, Trim & Fit Co.</span>
                                     </div>
                                 </div>
                             </blockquote>
@@ -46,65 +46,45 @@ export default function Testimonials() {
                         <CardContent className="h-full p-0">
                             <blockquote className="grid h-full grid-rows-[1fr_auto] gap-8">
                                 <p className="text-xl font-heading font-medium text-white/80 italic leading-relaxed">
-                                    "Scalora is really extraordinary and very practical, no need to break your head. A real gold mine for businesses seeking predictable ROI."
+                                    "Their automation systems eliminated hours of manual CRM syncs for our regional retail outlets. Predictable growth, absolute data integrity."
                                 </p>
 
                                 <div className="grid grid-cols-[auto_1fr] items-center gap-4 pt-6 border-t border-white/5">
-                                    <Avatar className="size-12 grayscale hover:grayscale-0 transition-all">
+                                    <Avatar className="size-12 hover:scale-110 transition-all">
+                                        <AvatarImage
+                                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                                            alt="Priyanjali Das"
+                                            loading="lazy"
+                                        />
+                                        <AvatarFallback>PD</AvatarFallback>
+                                    </Avatar>
+                                    <div>
+                                        <cite className="text-sm font-bold text-white">Priyanjali Das</cite>
+                                        <span className="text-muted-text block text-xs uppercase tracking-widest font-bold">Chief Marketing Officer</span>
+                                    </div>
+                                </div>
+                            </blockquote>
+                        </CardContent>
+                    </Card>
+                    <Card className="glass-card md:col-span-2 border-white/10 p-8">
+                        <CardContent className="h-full p-0">
+                            <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
+                                <p className="text-xl font-heading font-medium text-white/80 italic leading-relaxed">
+                                    "The best performance marketing workflow we've integrated yet. Transparent tracking and real-time ROI reports that actually make sense."
+                                </p>
+
+                                <div className="grid grid-cols-[auto_1fr] gap-4 pt-6 border-t border-white/5">
+                                    <Avatar className="size-12 hover:scale-110 transition-all">
                                         <AvatarImage
                                             src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
-                                            alt="Jonathan Yombo"
+                                            alt="Vikram Malhotra"
                                             loading="lazy"
                                         />
-                                        <AvatarFallback>JY</AvatarFallback>
+                                        <AvatarFallback>VM</AvatarFallback>
                                     </Avatar>
                                     <div>
-                                        <cite className="text-sm font-bold text-white">Jonathan Yombo</cite>
-                                        <span className="text-muted-text block text-xs uppercase tracking-widest font-bold">Growth Partner</span>
-                                    </div>
-                                </div>
-                            </blockquote>
-                        </CardContent>
-                    </Card>
-                    <Card className="glass-card border-white/10 p-8">
-                        <CardContent className="h-full p-0">
-                            <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                                <p className="text-white/80">Great work on our scaling template. This is one of the best agency workflows I have seen so far!</p>
-
-                                <div className="grid items-center gap-3 [grid-template-columns:auto_1fr]">
-                                    <Avatar className="size-10">
-                                        <AvatarImage
-                                            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
-                                            alt="Yucel Faruksahan"
-                                            loading="lazy"
-                                        />
-                                        <AvatarFallback>YF</AvatarFallback>
-                                    </Avatar>
-                                    <div>
-                                        <cite className="text-xs font-bold text-white">Yucel Faruksahan</cite>
-                                        <span className="text-muted-text block text-[10px] uppercase tracking-widest font-bold">Director, Tailkits</span>
-                                    </div>
-                                </div>
-                            </blockquote>
-                        </CardContent>
-                    </Card>
-                    <Card className="glass-card border-white/10 p-8">
-                        <CardContent className="h-full p-0">
-                            <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                                <p className="text-white/80">Premium visuals combined with absolute data integrity. Scalora is the future of Indian agencies.</p>
-
-                                <div className="grid grid-cols-[auto_1fr] gap-3">
-                                    <Avatar className="size-10">
-                                        <AvatarImage
-                                            src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
-                                            alt="Rodrigo Aguilar"
-                                            loading="lazy"
-                                        />
-                                        <AvatarFallback>RA</AvatarFallback>
-                                    </Avatar>
-                                    <div>
-                                        <p className="text-xs font-bold text-white">Rodrigo Aguilar</p>
-                                        <span className="text-muted-text block text-[10px] uppercase tracking-widest font-bold">Creator, TailwindAwesome</span>
+                                        <cite className="text-sm font-bold text-white">Vikram Malhotra</cite>
+                                        <span className="text-muted-text block text-xs uppercase tracking-widest font-bold">Director of Growth</span>
                                     </div>
                                 </div>
                             </blockquote>

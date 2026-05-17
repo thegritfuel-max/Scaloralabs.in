@@ -85,9 +85,11 @@ export const Pricing: React.FC = () => {
                   ))}
                 </div>
 
-                <Button variant={plan.popular ? 'primary' : 'outline'} fullWidth size="lg">
-                  Choose Plan
-                </Button>
+                <a href="https://calendar.app.google/XzTZdumveiY2RaBw9" target="_blank" rel="noopener noreferrer">
+                  <Button variant={plan.popular ? 'primary' : 'outline'} fullWidth size="lg">
+                    Choose Plan
+                  </Button>
+                </a>
               </motion.div>
             ))}
           </div>
@@ -97,7 +99,9 @@ export const Pricing: React.FC = () => {
             <p className="text-muted-text mb-8 max-w-xl mx-auto">
               For enterprise solutions, custom software, or specialized retail growth, we build bespoke systems.
             </p>
-            <Button variant="outline" size="md">Talk to Founders</Button>
+            <a href="https://calendar.app.google/XzTZdumveiY2RaBw9" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="md">Talk to Founders</Button>
+            </a>
           </div>
         </div>
       </div>

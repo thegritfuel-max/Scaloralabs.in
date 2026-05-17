@@ -66,9 +66,11 @@ export const Navbar: React.FC = () => {
         </nav>
 
         <div className="hidden lg:block">
-          <Button variant="primary" size="md">
-            Book Call
-          </Button>
+          <a href="https://calendar.app.google/XzTZdumveiY2RaBw9" target="_blank" rel="noopener noreferrer">
+            <Button variant="primary" size="md">
+              Book Call
+            </Button>
+          </a>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -104,9 +106,11 @@ export const Navbar: React.FC = () => {
                 </Link>
               ))}
               <div className="mt-4">
-                <Button variant="primary" size="lg">
-                  Book Call
-                </Button>
+                <a href="https://calendar.app.google/XzTZdumveiY2RaBw9" target="_blank" rel="noopener noreferrer">
+                  <Button variant="primary" size="lg">
+                    Book Call
+                  </Button>
+                </a>
               </div>
             </div>
           </motion.div>
